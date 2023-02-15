@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000000;
+  position: relative;
+  width: 1773px;
+  height: 1170px;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url(fonts/Inter-Regular.ttf);
+}
+@font-face {
+  font-family: "Poppins";
+  src: url(fonts/Poppins-Regular.ttf);
+}
+header {
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 93px;
+  margin: 30px 19px 35px 12px;
+}
+header .logo {
+  width: 255px;
+  height: 57px;
+  margin-left: 41px;
+  cursor: pointer;
+}
+header span {
+  margin-left: 62px;
+  width: 385px;
+  height: 50px;
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 52px;
+  color: #FFFFFF;
+}
+header .searchbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px 73px 8.47px 23px;
+  width: 476px;
+  height: 50px;
+  margin-left: 25px;
+  margin-right: 103px;
+  background: #FFFFFF;
+  border-radius: 15px;
+}
+header .searchbar .search {
+  border: none;
+  font-size: 25px;
+  width: 160px;
+  margin: 15px 243px 15px 15.09px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+}
+header .searchbar .search::placeholder {
+  color: #000000;
+  opacity: 1;
+}
+header .bell {
+  width: 37px;
+  height: 41.03px;
+  cursor: pointer;
+}
+header .profil {
+  margin-left: 304px;
+  width: 54px;
+  height: 54px;
+  cursor: pointer;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 20.7% 53.8% 25.5%;
+}
+main .col-gauche {
+  grid-column: 1/2;
+  background-color: aqua;
+  padding: 0 22px 0 22px;
+}
+main .col-gauche .btn-dashboard {
+  display: flex;
+  align-items: center;
+  padding: 13px 29px;
+  gap: 17px;
+  background: linear-gradient(266.37deg, #FAFF00 -5.82%, #FAFF00 15.95%, #1970D6 41.2%, #6C1182 72.88%);
+  border-radius: 17px;
+  width: 253px;
+  height: 65px;
+  cursor: pointer;
+}
+main .col-gauche .btn-dashboard img {
+  width: 44px;
+  height: 45px;
+}
+main .col-gauche .btn-dashboard span {
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 38px;
+}
+main .col-gauche .menu-dashboard {
+  background-color: #1970D6;
+  margin: 37px 0 37px 0;
+}
+main .col-centre {
+  grid-column: 2/3;
+  background-color: blueviolet;
+}
+main .col-droite {
+  grid-column: 3/4;
+  background-color: brown;
+}
+
+/*# sourceMappingURL=style.css.map */
