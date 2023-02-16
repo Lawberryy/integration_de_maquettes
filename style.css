@@ -164,7 +164,233 @@ main .col-gauche .btn-logout span {
 }
 main .col-centre {
   grid-column: 2/3;
-  background-color: blueviolet;
+}
+main .col-centre .top-bloc {
+  display: flex;
+  align-items: center;
+  gap: 91px;
+  color: #FFFFFF;
+}
+main .col-centre .top-bloc .bloc-gauche .balance {
+  font-family: "Poppins";
+  font-weight: 900;
+  font-size: 22px;
+  line-height: 33px;
+  opacity: 0.8;
+  margin-bottom: 21px;
+}
+main .col-centre .top-bloc .bloc-gauche div {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-bottom: 10px;
+}
+main .col-centre .top-bloc .bloc-gauche div p {
+  font-family: "Poppins";
+  font-weight: 700;
+  font-size: 29px;
+  line-height: 44px;
+}
+main .col-centre .top-bloc .bloc-gauche div span {
+  font-family: "Inter";
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 18px;
+  color: #000000;
+  padding: 4px 9px 7px 9px;
+  background-color: #FAFF00;
+  border-radius: 8px;
+}
+main .col-centre .top-bloc .bloc-gauche p:last-child {
+  font-family: "Poppins";
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 33px;
+  opacity: 0.7;
+}
+main .col-centre .top-bloc .bloc-droit {
+  padding: 11px 19px 7px 19px;
+  background-color: #292727;
+  border-radius: 17px;
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 33px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 22px;
+}
+main .col-centre .top-bloc .bloc-droit span:first-child {
+  padding: 5.5px 22px;
+  background: #0D0C0C;
+  border-radius: 17px;
+}
+main .col-centre .bloc-graphique {
+  margin: 30px 0 21px 0;
+  padding: 30px 36px 64px 40px;
+  background-color: rgba(48, 53, 65, 0.67);
+  border-radius: 30px;
+  height: 558px;
+  width: 100%;
+  color: #FFFFFF;
+}
+main .col-centre .bloc-graphique .top-row {
+  display: flex;
+  justify-content: space-between;
+}
+main .col-centre .bloc-graphique .top-row .date-options {
+  display: flex;
+  align-items: center;
+}
+main .col-centre .bloc-graphique .top-row .date-options span, main .col-centre .bloc-graphique .top-row .date-options img {
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 27px;
+  line-height: 40px;
+  padding: 2px 6px;
+  border-radius: 5px;
+  background-color: #000000;
+  margin-right: 10px;
+}
+main .col-centre .bloc-graphique .top-row .date-options img {
+  padding: 9px;
+}
+main .col-centre .bloc-graphique .top-row .switch-bloc {
+  display: flex;
+  gap: 13px;
+}
+main .col-centre .bloc-graphique .top-row .switch-bloc div {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-color: #000000;
+  padding: 3px 18px 3px 11px;
+}
+main .col-centre .bloc-graphique .top-row .switch-bloc div span {
+  opacity: 0.7;
+  font-family: "Poppins";
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 26px;
+}
+main .col-centre .bloc-graphique .top-row .switch-bloc div img:first-child {
+  width: 30px;
+  height: 30px;
+}
+main .col-centre .bloc-graphique .middle-row {
+  display: flex;
+  padding: 18px 0;
+}
+main .col-centre .bloc-graphique .middle-row #numbers-col {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 32px;
+  padding-left: 7px;
+  font-family: "Poppins";
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 26px;
+  color: rgba(255, 255, 255, 0.7);
+}
+main .col-centre .bloc-graphique .middle-row .graphique {
+  position: relative;
+  width: 100%;
+}
+main .col-centre .bloc-graphique .middle-row .graphique img {
+  max-width: 100%;
+}
+main .col-centre .bloc-graphique .middle-row .graphique img:first-child {
+  z-index: 3;
+  position: absolute;
+}
+main .col-centre .bloc-graphique .middle-row .graphique img:nth-child(2) {
+  z-index: 1;
+  position: absolute;
+  left: 6%;
+  top: 10px;
+}
+main .col-centre .bloc-graphique .middle-row .graphique img:last-child {
+  z-index: 2;
+  position: absolute;
+  right: 15px;
+  bottom: 30px;
+}
+main .col-centre .bloc-graphique #days {
+  font-family: "Poppins";
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 26px;
+  color: rgba(255, 255, 255, 0.7);
+  display: flex;
+  gap: 19px;
+  padding: 0 20px;
+}
+main .col-centre .bloc-graphique div:last-child {
+  display: flex;
+  justify-content: center;
+}
+main .col-centre .recent-t {
+  padding: 0 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+main .col-centre .recent-t div:first-child {
+  display: flex;
+  justify-content: space-between;
+}
+main .col-centre .recent-t div:first-child p, main .col-centre .recent-t div:first-child span {
+  font-family: "Poppins";
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 33px;
+  color: #FFFFFF;
+}
+main .col-centre .recent-t div:first-child span {
+  opacity: 0.7;
+}
+main .col-centre .recent-t .r-transac {
+  width: 100%;
+  background: rgba(32, 35, 43, 0.7);
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #FFFFFF;
+  padding: 12px 30px 17px 50px;
+}
+main .col-centre .recent-t .r-transac img:first-child {
+  height: 39px;
+  width: 39px;
+}
+main .col-centre .recent-t .r-transac .courbe {
+  width: 143px;
+}
+main .col-centre .recent-t .r-transac div {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+main .col-centre .recent-t .r-transac div span {
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 21px;
+}
+main .col-centre .recent-t .r-transac div span:last-child {
+  opacity: 0.7;
+  font-weight: 600;
+}
+main .col-centre .recent-t .r-transac .trade {
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 21px;
+  font-weight: 600;
+  background-color: #000000;
+  border-radius: 30px;
+  padding: 6px 18px;
 }
 main .col-droite {
   grid-column: 3/4;

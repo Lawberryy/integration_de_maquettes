@@ -1,0 +1,22 @@
+@mixin title() {
+    font-family: 'Poppins';
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 33px;
+    color: #FFFFFF;
+}
+
+@mixin inter() {
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 21px;
+}
+
+@mixin poppins() {
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 26px;
+    color: rgba(255, 255, 255, 0.7);
+}
