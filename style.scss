@@ -8,7 +8,7 @@ body {
     background-color: #000000;
     position: relative;
     width: 1773px;
-    height: 1170px;
+    // height: 1170px;
 }
 
 @font-face {
@@ -90,7 +90,10 @@ header {
     }
 
     .profil {
-        margin-left: 304px;
+        // margin-left: 304px;
+        position: absolute;
+        right: 0;
+        top: 24px;
         width: 54px;
         height: 54px;
         cursor: pointer;
@@ -110,8 +113,15 @@ main {
 
     .col-gauche {
         grid-column: 1/2;
-        background-color: aqua;
         padding: 0 22px 0 22px;
+        display: flex;
+        flex-direction: column;
+
+        .dashboard {
+            display: flex;
+            justify-content: center;
+            margin-top: 92px;
+        }
 
         .btn-dashboard {
             display: flex;
@@ -138,10 +148,57 @@ main {
         }
 
         .menu-dashboard {
-            // width: 100%;
-            background-color: #1970D6;
-            // padding: 0 22px 0 22px;
-            margin: 37px 0 37px 0;
+            display: flex;
+            flex-direction: column;
+            margin-top: 67px;
+            gap: 18px;
+
+            div {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                // padding: 23.5px 0px 18.5px 45.5px;
+                padding-left: 45.5px;
+                // height: 78px;
+
+                img {
+                    width: 44px;
+                    height: 44px;
+                    color: rgba(255, 255, 255, 0.8);
+                }
+
+                span {
+                    font-family: 'Poppins';
+                    font-weight: 500;
+                    font-size: 25px;
+                    line-height: 38px;
+                    color: rgba(255, 255, 255, 0.8);
+                    opacity: 0.8;
+                }
+            }
+        }
+
+        .btn-logout {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 14px 0px 14px 11px;
+            position: absolute;
+            bottom: 27px;
+            left: 76px;
+
+            img {
+                width: 40px;
+                height: 35px;
+            }
+
+            span {
+                font-family: 'Inter';
+                font-weight: 400;
+                font-size: 25px;
+                line-height: 30px;
+                color: rgba(255, 255, 255, 0.8);
+            }
         }
     }
 
@@ -156,6 +213,109 @@ main {
 
     .col-droite {
         grid-column: 3/4;
-        background-color: brown;
+
+        padding: 20px 21px 37px 24px;
+
+        p {
+            font-family: 'Poppins';
+            font-weight: 700;
+            font-size: 22px;
+            line-height: 33px;
+            color: #FFFFFF;
+        }
+
+        .transactions {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-top: 41px;
+            margin-bottom: 38px;
+
+            .transaction {
+                display: flex;
+                gap: 27px;
+                padding: 7px 0px 7px 17px;
+    
+                img {
+                    width: 52px;
+                    height: 52px;
+                }
+    
+                span {
+                    font-family: 'Inter';
+                    font-weight: 600;
+                    font-size: 19px;
+                    line-height: 23px;
+                }
+    
+                .info-transaction {
+                    color: #FFFFFF;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5px;
+                    width: 100%;
+                    padding-right: 13px;
+    
+                    div {
+                        display: flex;
+                        justify-content: space-between;
+                    }
+    
+                    div:first-child {
+    
+                        span:last-child {
+                            color: #4AD619;
+                        }
+                    }
+    
+                    div:last-child {
+                        opacity: 0.7;
+                    }
+                }
+            }
+        }
+
+        .assets {
+            .asset {
+                width: 100%;
+                border-radius: 30px;
+                height: 174px;
+                padding: 20px 51px 12px 29px;
+
+                img {
+                    width: 70px;
+                    height: 70px;
+                }
+
+                .title-asset {
+                    font-family: 'Inter';
+                    font-weight: 600;
+                    font-size: 19px;
+                    line-height: 23px;
+                }
+
+                div {
+                    margin-top: 9px;
+                    display: flex;
+                    justify-content: space-between;
+
+                    span {
+                        font-family: 'Inter';
+                        font-weight: 600;
+                        font-size: 27px;
+                        line-height: 33px;
+                    }
+                }
+            }
+            .asset:first-child {
+                background: linear-gradient(98.73deg, #611D8D 35.75%, #2F7EC1 73.26%);
+                margin-top: 15px;
+                margin-bottom: 28px;
+                color: #FFFFFF;
+            }
+            .asset:last-child {
+                background: linear-gradient(99.56deg, #FAFF00 35.82%, #29ABE2 64.75%, rgba(255, 255, 255, 0.7) 91.33%);
+            }
+        }
     }
 }
