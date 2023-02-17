@@ -98,3 +98,17 @@ let graph = new Chart(srx, {
         ]
     }
 })
+
+
+// menu burger
+
+let btnBurger = document.getElementById('burger')
+let divBurger = document.getElementById('menu-burger')
+
+function burger() {
+    divBurger.classList.toggle('none')
+}
+
+btnBurger.addEventListener('click', p => {
+    burger()
+})

@@ -21,8 +21,13 @@ header {
   display: flex;
   align-items: center;
   position: relative;
-  height: 93px;
   margin: 30px 19px 35px 12px;
+}
+@media screen and (max-width: 1000px) {
+  header {
+    flex-direction: column;
+    gap: 10px;
+  }
 }
 header .logo {
   width: 255px;
@@ -64,6 +69,7 @@ header span {
 @media screen and (max-width: 750px) {
   header span {
     margin-left: 30px;
+    width: auto;
   }
 }
 header .searchbar {
@@ -82,6 +88,11 @@ header .searchbar {
   header .searchbar {
     padding: 6px 10px;
     margin-right: 3%;
+  }
+}
+@media screen and (max-width: 750px) {
+  header .searchbar {
+    width: 80%;
   }
 }
 header .searchbar .search {
@@ -153,6 +164,28 @@ main {
   main {
     grid-template-columns: 100%;
   }
+}
+main .fa-bars {
+  color: #FFFFFF;
+  margin-left: 20px;
+  margin-bottom: 30px;
+  font-size: 25px;
+  cursor: pointer;
+  display: none;
+}
+@media screen and (max-width: 1000px) {
+  main .fa-bars {
+    display: block;
+  }
+}
+main .col-burger span {
+  color: #FFFFFF;
+}
+main .none {
+  display: none;
+}
+main .active {
+  display: flex;
 }
 main .col-gauche {
   grid-column: 1/2;
@@ -329,6 +362,12 @@ main .col-centre .top-bloc {
   align-items: center;
   gap: 9.54%;
   color: #FFFFFF;
+}
+@media screen and (max-width: 750px) {
+  main .col-centre .top-bloc {
+    flex-wrap: wrap;
+    row-gap: 10px;
+  }
 }
 main .col-centre .top-bloc .bloc-gauche .balance {
   font-family: "Poppins";

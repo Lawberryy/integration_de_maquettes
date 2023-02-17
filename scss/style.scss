@@ -29,8 +29,15 @@ header {
     display: flex;
     align-items: center;
     position: relative;
-    height: 93px;
+    // height: 93px;
     margin: 30px 19px 35px 12px;
+
+    @include mixins.breakpoint(1000px) {
+        // flex-wrap: wrap;
+        // row-gap: 10px;
+        flex-direction: column;
+        gap: 10px;
+    }
 
     .logo {
         width: 255px;
@@ -67,6 +74,7 @@ header {
         }
         @include mixins.breakpoint(750px) {
             margin-left: 30px;
+            width: auto;
         }
     }
 
@@ -87,6 +95,9 @@ header {
         @include mixins.breakpoint(1000px) {
             padding: 6px 10px;
             margin-right: 3%;
+        }
+        @include mixins.breakpoint(750px) {
+            width: 80%;
         }
 
         .search {
@@ -161,6 +172,32 @@ main {
         grid-template-columns: 100%;
     }
 
+    .fa-bars {
+        color: #FFFFFF;
+        margin-left: 20px;
+        margin-bottom: 30px;
+        font-size: 25px;
+        cursor: pointer;
+        display: none;
+
+        @include mixins.breakpoint(1000px) {
+            display: block;
+        }
+    }
+
+    .col-burger {
+        span {
+            color: #FFFFFF;
+        }
+    }
+
+    .none {
+        display: none;
+    }
+    .active{
+        display: flex;
+    }
+
     // COL GAUCHE
 
     .col-gauche {
@@ -171,6 +208,9 @@ main {
 
         @include mixins.breakpoint(1000px) {
             display: none;
+        }
+        @include mixins.breakpoint(750px) {
+            
         }
 
         .dashboard {
@@ -331,6 +371,11 @@ main {
             align-items: center;
             gap: 9.54%;
             color: #FFFFFF;
+
+            @include mixins.breakpoint(750px) {
+                flex-wrap: wrap;
+                row-gap: 10px;
+            }
 
             .bloc-gauche {
 
