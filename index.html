@@ -99,7 +99,7 @@
                             <span>BTC</span>
                             <img src="images/graphique/chevron.svg" alt="icon-chevron">
                         </div>
-                        <img src="images/graphique/double-fleches.svg" alt="double-fleches">
+                        <img src="images/graphique/double-fleches.svg" alt="double-fleches" class="double-arrows">
                         <div>
                             <img src="images/icon-etherium-white.svg" alt="icon-etherium-white">
                             <span>ETH</span>
@@ -109,17 +109,21 @@
                 </div>
 
                 <div class="middle-row">
-                    <div id="numbers-col"></div>
+                    <!-- <div id="numbers-col"></div>
                     <div class="graphique">
                         <img src="images/graphique/courbe1.png" alt="courbe-1">
                         <img src="images/graphique/courbe2.png" alt="courbe-2">
                         <img src="images/graphique/courbe3.png" alt="courbe-3">
-                    </div>
+                        <img src="images/graphique/graphique.png" alt="graphique">
+                    </div> -->
+                    <canvas id="graph"></canvas>
                 </div>
 
-                <div>
+                <!-- <div>
                     <div id="days"></div>
-                </div>
+                </div> -->
+
+                
             </div>
 
             <div class="recent-t">
@@ -195,7 +199,7 @@
                     </div>
                 </div>
                 <div class="transaction">
-                    <img src="images/icon-lite-coin.svg" alt="icon-lite-coin">
+                    <img src="images/icon-lite-coin.png" alt="icon-lite-coin">
                     <div class="info-transaction">
                         <div>
                             <span>Lite Coin</span>
@@ -257,6 +261,7 @@
         </div>
     </main>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

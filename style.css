@@ -7,7 +7,6 @@
 body {
   background-color: #000000;
   position: relative;
-  width: 1773px;
 }
 
 @font-face {
@@ -27,13 +26,23 @@ header {
 }
 header .logo {
   width: 255px;
-  height: 57px;
-  margin-left: 41px;
+  height: auto;
+  margin-left: 2.31%;
   cursor: pointer;
+}
+@media screen and (max-width: 1300px) {
+  header .logo {
+    width: 200px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  header .logo {
+    width: 150px;
+  }
 }
 header span {
   margin-left: 62px;
-  width: 385px;
+  width: 21.71%;
   height: 50px;
   font-family: "Poppins";
   font-weight: 500;
@@ -41,17 +50,39 @@ header span {
   line-height: 52px;
   color: #FFFFFF;
 }
+@media screen and (max-width: 1300px) {
+  header span {
+    font-size: 25px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  header span {
+    font-size: 20px;
+    width: 18%;
+  }
+}
+@media screen and (max-width: 750px) {
+  header span {
+    margin-left: 30px;
+  }
+}
 header .searchbar {
   display: flex;
   flex-direction: row;
   align-items: center;
   padding: 10px 73px 8.47px 23px;
-  width: 476px;
+  width: 26.85%;
   height: 50px;
-  margin-left: 25px;
-  margin-right: 103px;
+  margin-left: 1.41%;
+  margin-right: 5.8%;
   background: #FFFFFF;
   border-radius: 15px;
+}
+@media screen and (max-width: 1000px) {
+  header .searchbar {
+    padding: 6px 10px;
+    margin-right: 3%;
+  }
 }
 header .searchbar .search {
   border: none;
@@ -63,59 +94,138 @@ header .searchbar .search {
   font-weight: 400;
   line-height: 30px;
 }
+@media screen and (max-width: 1000px) {
+  header .searchbar .search {
+    font-size: 18px;
+    width: 110px;
+  }
+}
 header .searchbar .search::placeholder {
   color: #000000;
   opacity: 1;
+}
+@media screen and (max-width: 1000px) {
+  header .searchbar img {
+    width: 30px;
+    height: auto;
+  }
 }
 header .bell {
   width: 37px;
   height: 41.03px;
   cursor: pointer;
 }
+@media screen and (max-width: 1000px) {
+  header .bell {
+    width: 30px;
+    height: auto;
+  }
+}
 header .profil {
   position: absolute;
   right: 0;
   top: 24px;
   width: 54px;
-  height: 54px;
+  height: auto;
   cursor: pointer;
+}
+@media screen and (max-width: 1000px) {
+  header .profil {
+    width: 45px;
+  }
 }
 
 main {
   display: grid;
   grid-template-columns: 20.7% 53.8% 25.5%;
 }
+@media screen and (max-width: 1300px) {
+  main {
+    grid-template-columns: 18% 54% 28%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  main {
+    grid-template-columns: 66% 34%;
+  }
+}
+@media screen and (max-width: 750px) {
+  main {
+    grid-template-columns: 100%;
+  }
+}
 main .col-gauche {
   grid-column: 1/2;
-  padding: 0 22px 0 22px;
+  padding: 0 22px;
   display: flex;
   flex-direction: column;
+}
+@media screen and (max-width: 1000px) {
+  main .col-gauche {
+    display: none;
+  }
 }
 main .col-gauche .dashboard {
   display: flex;
   justify-content: center;
   margin-top: 92px;
 }
+@media screen and (max-width: 1300px) {
+  main .col-gauche .dashboard {
+    margin-top: 40px;
+  }
+}
 main .col-gauche .btn-dashboard {
   display: flex;
   align-items: center;
   padding: 13px 29px;
-  gap: 17px;
+  gap: 6.72%;
   background: linear-gradient(266.37deg, #FAFF00 -5.82%, #FAFF00 15.95%, #1970D6 41.2%, #6C1182 72.88%);
   border-radius: 17px;
-  width: 253px;
   height: 65px;
   cursor: pointer;
+}
+@media screen and (max-width: 1600px) {
+  main .col-gauche .btn-dashboard {
+    padding: 10px 20px;
+  }
+}
+@media screen and (max-width: 1300px) {
+  main .col-gauche .btn-dashboard {
+    padding: 8px 16px;
+  }
 }
 main .col-gauche .btn-dashboard img {
   width: 44px;
   height: 45px;
+}
+@media screen and (max-width: 1600px) {
+  main .col-gauche .btn-dashboard img {
+    width: 35px;
+    height: 35px;
+  }
+}
+@media screen and (max-width: 1300px) {
+  main .col-gauche .btn-dashboard img {
+    width: 28px;
+    height: 28px;
+  }
 }
 main .col-gauche .btn-dashboard span {
   font-family: "Poppins";
   font-weight: 400;
   font-size: 25px;
   line-height: 38px;
+}
+@media screen and (max-width: 1600px) {
+  main .col-gauche .btn-dashboard span {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 1300px) {
+  main .col-gauche .btn-dashboard span {
+    font-size: 14px;
+  }
 }
 main .col-gauche .menu-dashboard {
   display: flex;
@@ -127,12 +237,29 @@ main .col-gauche .menu-dashboard div {
   display: flex;
   align-items: center;
   gap: 10px;
-  padding-left: 45.5px;
+  padding-left: 14%;
+}
+@media screen and (max-width: 1300px) {
+  main .col-gauche .menu-dashboard div {
+    padding-left: 12%;
+  }
 }
 main .col-gauche .menu-dashboard div img {
   width: 44px;
   height: 44px;
   color: rgba(255, 255, 255, 0.8);
+}
+@media screen and (max-width: 1600px) {
+  main .col-gauche .menu-dashboard div img {
+    width: 35px;
+    height: 35px;
+  }
+}
+@media screen and (max-width: 1300px) {
+  main .col-gauche .menu-dashboard div img {
+    width: 30px;
+    height: 30px;
+  }
 }
 main .col-gauche .menu-dashboard div span {
   font-family: "Poppins";
@@ -142,6 +269,16 @@ main .col-gauche .menu-dashboard div span {
   color: rgba(255, 255, 255, 0.8);
   opacity: 0.8;
 }
+@media screen and (max-width: 1600px) {
+  main .col-gauche .menu-dashboard div span {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 1300px) {
+  main .col-gauche .menu-dashboard div span {
+    font-size: 17px;
+  }
+}
 main .col-gauche .btn-logout {
   display: flex;
   align-items: center;
@@ -149,11 +286,17 @@ main .col-gauche .btn-logout {
   padding: 14px 0px 14px 11px;
   position: absolute;
   bottom: 27px;
-  left: 76px;
+  left: 4.29%;
 }
 main .col-gauche .btn-logout img {
   width: 40px;
   height: 35px;
+}
+@media screen and (max-width: 1600px) {
+  main .col-gauche .btn-logout img {
+    width: 35px;
+    height: auto;
+  }
 }
 main .col-gauche .btn-logout span {
   font-family: "Inter";
@@ -162,13 +305,29 @@ main .col-gauche .btn-logout span {
   line-height: 30px;
   color: rgba(255, 255, 255, 0.8);
 }
+@media screen and (max-width: 1600px) {
+  main .col-gauche .btn-logout span {
+    font-size: 20px;
+  }
+}
 main .col-centre {
   grid-column: 2/3;
+}
+@media screen and (max-width: 1000px) {
+  main .col-centre {
+    grid-column: 1/2;
+    padding-left: 20px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  main .col-centre {
+    padding-right: 20px;
+  }
 }
 main .col-centre .top-bloc {
   display: flex;
   align-items: center;
-  gap: 91px;
+  gap: 9.54%;
   color: #FFFFFF;
 }
 main .col-centre .top-bloc .bloc-gauche .balance {
@@ -178,6 +337,12 @@ main .col-centre .top-bloc .bloc-gauche .balance {
   line-height: 33px;
   opacity: 0.8;
   margin-bottom: 21px;
+}
+@media screen and (max-width: 1600px) {
+  main .col-centre .top-bloc .bloc-gauche .balance {
+    font-size: 17px;
+    margin-bottom: 16px;
+  }
 }
 main .col-centre .top-bloc .bloc-gauche div {
   display: flex;
@@ -191,6 +356,11 @@ main .col-centre .top-bloc .bloc-gauche div p {
   font-size: 29px;
   line-height: 44px;
 }
+@media screen and (max-width: 1600px) {
+  main .col-centre .top-bloc .bloc-gauche div p {
+    font-size: 20px;
+  }
+}
 main .col-centre .top-bloc .bloc-gauche div span {
   font-family: "Inter";
   font-weight: 700;
@@ -201,12 +371,23 @@ main .col-centre .top-bloc .bloc-gauche div span {
   background-color: #FAFF00;
   border-radius: 8px;
 }
+@media screen and (max-width: 1600px) {
+  main .col-centre .top-bloc .bloc-gauche div span {
+    font-size: 12px;
+    padding: 3px 6px;
+  }
+}
 main .col-centre .top-bloc .bloc-gauche p:last-child {
   font-family: "Poppins";
   font-weight: 600;
   font-size: 22px;
   line-height: 33px;
   opacity: 0.7;
+}
+@media screen and (max-width: 1600px) {
+  main .col-centre .top-bloc .bloc-gauche p:last-child {
+    font-size: 17px;
+  }
 }
 main .col-centre .top-bloc .bloc-droit {
   padding: 11px 19px 7px 19px;
@@ -221,23 +402,45 @@ main .col-centre .top-bloc .bloc-droit {
   align-items: center;
   gap: 22px;
 }
+@media screen and (max-width: 1600px) {
+  main .col-centre .top-bloc .bloc-droit {
+    font-size: 17px;
+    gap: 17px;
+    padding: 8px 15px 8px 15px;
+  }
+}
+@media screen and (max-width: 1300px) {
+  main .col-centre .top-bloc .bloc-droit {
+    font-size: 13px;
+  }
+}
 main .col-centre .top-bloc .bloc-droit span:first-child {
   padding: 5.5px 22px;
   background: #0D0C0C;
   border-radius: 17px;
 }
+@media screen and (max-width: 1300px) {
+  main .col-centre .top-bloc .bloc-droit span:first-child {
+    padding: 3px 10px;
+  }
+}
 main .col-centre .bloc-graphique {
   margin: 30px 0 21px 0;
-  padding: 30px 36px 64px 40px;
+  padding: 30px;
   background-color: rgba(48, 53, 65, 0.67);
   border-radius: 30px;
-  height: 558px;
   width: 100%;
   color: #FFFFFF;
 }
 main .col-centre .bloc-graphique .top-row {
   display: flex;
   justify-content: space-between;
+}
+@media screen and (max-width: 1000px) {
+  main .col-centre .bloc-graphique .top-row {
+    flex-wrap: wrap;
+    row-gap: 10px;
+  }
 }
 main .col-centre .bloc-graphique .top-row .date-options {
   display: flex;
@@ -253,12 +456,43 @@ main .col-centre .bloc-graphique .top-row .date-options span, main .col-centre .
   background-color: #000000;
   margin-right: 10px;
 }
+@media screen and (max-width: 1600px) {
+  main .col-centre .bloc-graphique .top-row .date-options span, main .col-centre .bloc-graphique .top-row .date-options img {
+    font-size: 20px;
+    padding: 1px 5px;
+  }
+}
+@media screen and (max-width: 1300px) {
+  main .col-centre .bloc-graphique .top-row .date-options span, main .col-centre .bloc-graphique .top-row .date-options img {
+    font-size: 15px;
+    padding: 0 5px;
+  }
+}
 main .col-centre .bloc-graphique .top-row .date-options img {
   padding: 9px;
 }
+@media screen and (max-width: 1300px) {
+  main .col-centre .bloc-graphique .top-row .date-options img {
+    width: 35px;
+    height: auto;
+  }
+}
 main .col-centre .bloc-graphique .top-row .switch-bloc {
   display: flex;
+  align-items: center;
   gap: 13px;
+}
+@media screen and (max-width: 1600px) {
+  main .col-centre .bloc-graphique .top-row .switch-bloc .double-arrows {
+    width: 40px;
+    height: 40px;
+  }
+}
+@media screen and (max-width: 1300px) {
+  main .col-centre .bloc-graphique .top-row .switch-bloc .double-arrows {
+    width: 30px;
+    height: 30px;
+  }
 }
 main .col-centre .bloc-graphique .top-row .switch-bloc div {
   display: flex;
@@ -267,6 +501,12 @@ main .col-centre .bloc-graphique .top-row .switch-bloc div {
   background-color: #000000;
   padding: 3px 18px 3px 11px;
 }
+@media screen and (max-width: 1300px) {
+  main .col-centre .bloc-graphique .top-row .switch-bloc div {
+    gap: 12px;
+    padding: 3px 10px;
+  }
+}
 main .col-centre .bloc-graphique .top-row .switch-bloc div span {
   opacity: 0.7;
   font-family: "Poppins";
@@ -274,57 +514,37 @@ main .col-centre .bloc-graphique .top-row .switch-bloc div span {
   font-size: 17px;
   line-height: 26px;
 }
+@media screen and (max-width: 1300px) {
+  main .col-centre .bloc-graphique .top-row .switch-bloc div span {
+    font-size: 13px;
+  }
+}
 main .col-centre .bloc-graphique .top-row .switch-bloc div img:first-child {
   width: 30px;
   height: 30px;
+}
+@media screen and (max-width: 1300px) {
+  main .col-centre .bloc-graphique .top-row .switch-bloc div img:first-child {
+    width: 20px;
+    height: 20px;
+  }
+}
+@media screen and (max-width: 1300px) {
+  main .col-centre .bloc-graphique .top-row .switch-bloc div img:last-child {
+    height: 13px;
+    width: 13px;
+  }
 }
 main .col-centre .bloc-graphique .middle-row {
   display: flex;
   padding: 18px 0;
 }
-main .col-centre .bloc-graphique .middle-row #numbers-col {
-  display: flex;
-  flex-direction: column-reverse;
-  gap: 32px;
-  padding-left: 7px;
-  font-family: "Poppins";
-  font-weight: 600;
-  font-size: 17px;
-  line-height: 26px;
-  color: rgba(255, 255, 255, 0.7);
-}
 main .col-centre .bloc-graphique .middle-row .graphique {
   position: relative;
-  width: 100%;
 }
 main .col-centre .bloc-graphique .middle-row .graphique img {
   max-width: 100%;
-}
-main .col-centre .bloc-graphique .middle-row .graphique img:first-child {
-  z-index: 3;
-  position: absolute;
-}
-main .col-centre .bloc-graphique .middle-row .graphique img:nth-child(2) {
-  z-index: 1;
-  position: absolute;
-  left: 6%;
-  top: 10px;
-}
-main .col-centre .bloc-graphique .middle-row .graphique img:last-child {
-  z-index: 2;
-  position: absolute;
-  right: 15px;
-  bottom: 30px;
-}
-main .col-centre .bloc-graphique #days {
-  font-family: "Poppins";
-  font-weight: 600;
-  font-size: 17px;
-  line-height: 26px;
-  color: rgba(255, 255, 255, 0.7);
-  display: flex;
-  gap: 19px;
-  padding: 0 20px;
+  height: auto;
 }
 main .col-centre .bloc-graphique div:last-child {
   display: flex;
@@ -347,6 +567,11 @@ main .col-centre .recent-t div:first-child p, main .col-centre .recent-t div:fir
   line-height: 33px;
   color: #FFFFFF;
 }
+@media screen and (max-width: 1600px) {
+  main .col-centre .recent-t div:first-child p, main .col-centre .recent-t div:first-child span {
+    font-size: 17px;
+  }
+}
 main .col-centre .recent-t div:first-child span {
   opacity: 0.7;
 }
@@ -359,6 +584,17 @@ main .col-centre .recent-t .r-transac {
   justify-content: space-between;
   color: #FFFFFF;
   padding: 12px 30px 17px 50px;
+}
+@media screen and (max-width: 1300px) {
+  main .col-centre .recent-t .r-transac {
+    padding: 10px 25px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  main .col-centre .recent-t .r-transac {
+    flex-wrap: wrap;
+    row-gap: 10px;
+  }
 }
 main .col-centre .recent-t .r-transac img:first-child {
   height: 39px;
@@ -378,6 +614,11 @@ main .col-centre .recent-t .r-transac div span {
   font-size: 17px;
   line-height: 21px;
 }
+@media screen and (max-width: 1300px) {
+  main .col-centre .recent-t .r-transac div span {
+    font-size: 10px;
+  }
+}
 main .col-centre .recent-t .r-transac div span:last-child {
   opacity: 0.7;
   font-weight: 600;
@@ -392,9 +633,30 @@ main .col-centre .recent-t .r-transac .trade {
   border-radius: 30px;
   padding: 6px 18px;
 }
+@media screen and (max-width: 1300px) {
+  main .col-centre .recent-t .r-transac .trade {
+    font-size: 11px;
+    padding: 5px 12px;
+  }
+}
 main .col-droite {
   grid-column: 3/4;
   padding: 20px 21px 37px 24px;
+}
+@media screen and (max-width: 1000px) {
+  main .col-droite {
+    grid-column: 2/3;
+  }
+}
+@media screen and (max-width: 750px) {
+  main .col-droite {
+    grid-column: 1/2;
+  }
+}
+@media screen and (max-width: 1300px) {
+  main .col-droite {
+    padding: 20px 22px;
+  }
 }
 main .col-droite p {
   font-family: "Poppins";
@@ -402,6 +664,11 @@ main .col-droite p {
   font-size: 22px;
   line-height: 33px;
   color: #FFFFFF;
+}
+@media screen and (max-width: 1600px) {
+  main .col-droite p {
+    font-size: 17px;
+  }
 }
 main .col-droite .transactions {
   display: flex;
@@ -415,15 +682,36 @@ main .col-droite .transactions .transaction {
   gap: 27px;
   padding: 7px 0px 7px 17px;
 }
+@media screen and (max-width: 1300px) {
+  main .col-droite .transactions .transaction {
+    gap: 15px;
+  }
+}
 main .col-droite .transactions .transaction img {
   width: 52px;
   height: 52px;
+}
+@media screen and (max-width: 1600px) {
+  main .col-droite .transactions .transaction img {
+    width: 40px;
+    height: 40px;
+  }
 }
 main .col-droite .transactions .transaction span {
   font-family: "Inter";
   font-weight: 600;
   font-size: 19px;
   line-height: 23px;
+}
+@media screen and (max-width: 1600px) {
+  main .col-droite .transactions .transaction span {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 1300px) {
+  main .col-droite .transactions .transaction span {
+    font-size: 10px;
+  }
 }
 main .col-droite .transactions .transaction .info-transaction {
   color: #FFFFFF;
@@ -432,6 +720,11 @@ main .col-droite .transactions .transaction .info-transaction {
   gap: 5px;
   width: 100%;
   padding-right: 13px;
+}
+@media screen and (max-width: 1600px) {
+  main .col-droite .transactions .transaction .info-transaction {
+    gap: 3px;
+  }
 }
 main .col-droite .transactions .transaction .info-transaction div {
   display: flex;
@@ -446,12 +739,17 @@ main .col-droite .transactions .transaction .info-transaction div:last-child {
 main .col-droite .assets .asset {
   width: 100%;
   border-radius: 30px;
-  height: 174px;
   padding: 20px 51px 12px 29px;
 }
 main .col-droite .assets .asset img {
   width: 70px;
   height: 70px;
+}
+@media screen and (max-width: 1600px) {
+  main .col-droite .assets .asset img {
+    width: 50px;
+    height: 50px;
+  }
 }
 main .col-droite .assets .asset .title-asset {
   font-family: "Inter";
@@ -469,6 +767,16 @@ main .col-droite .assets .asset div span {
   font-weight: 600;
   font-size: 27px;
   line-height: 33px;
+}
+@media screen and (max-width: 1600px) {
+  main .col-droite .assets .asset div span {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 1300px) {
+  main .col-droite .assets .asset div span {
+    font-size: 15px;
+  }
 }
 main .col-droite .assets .asset:first-child {
   background: linear-gradient(98.73deg, #611D8D 35.75%, #2F7EC1 73.26%);

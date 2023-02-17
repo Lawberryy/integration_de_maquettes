@@ -10,7 +10,7 @@
 body {
     background-color: #000000;
     position: relative;
-    width: 1773px;
+    // width: 1773px;
     // height: 1170px;
 }
 
@@ -34,14 +34,21 @@ header {
 
     .logo {
         width: 255px;
-        height: 57px;
-        margin-left: 41px;
+        height: auto;
+        margin-left: 2.31%;
         cursor: pointer;
+
+        @include mixins.breakpoint(1300px) {
+            width: 200px;
+        }
+        @include mixins.breakpoint(1000px) {
+            width: 150px;
+        }
     }
 
     span {
         margin-left: 62px;
-        width: 385px;
+        width: 21.71%;
         height: 50px;
 
         font-family: 'Poppins';
@@ -50,6 +57,17 @@ header {
         line-height: 52px;
 
         color: #FFFFFF;
+
+        @include mixins.breakpoint(1300px) {
+            font-size: 25px;
+        }
+        @include mixins.breakpoint(1000px) {
+            font-size: 20px;
+            width: 18%;
+        }
+        @include mixins.breakpoint(750px) {
+            margin-left: 30px;
+        }
     }
 
     .searchbar {
@@ -57,17 +75,19 @@ header {
         flex-direction: row;
         align-items: center;
         padding: 10px 73px 8.47px 23px;
-        // gap: 10px;
 
-        width: 476px;
+        width: 26.85%;
         height: 50px;
-        margin-left: 25px;
-        margin-right: 103px;
+        margin-left: 1.41%;
+        margin-right: 5.8%;
 
         background: #FFFFFF;
         border-radius: 15px;
 
-        
+        @include mixins.breakpoint(1000px) {
+            padding: 6px 10px;
+            margin-right: 3%;
+        }
 
         .search {
             border: none;
@@ -78,11 +98,23 @@ header {
             font-style: normal;
             font-weight: 400;
             line-height: 30px;
+
+            @include mixins.breakpoint(1000px) {
+                font-size: 18px;
+                width: 110px;
+            }
         }
         .search::placeholder {
             color: #000000;
             opacity: 1;
             
+        }
+
+        img {
+            @include mixins.breakpoint(1000px) {
+                width: 30px;
+                height: auto;
+            }
         }
     }
 
@@ -90,16 +122,24 @@ header {
         width: 37px;
         height: 41.03px;
         cursor: pointer;
+
+        @include mixins.breakpoint(1000px) {
+            width: 30px;
+            height: auto;
+        }
     }
 
     .profil {
-        // margin-left: 304px;
         position: absolute;
         right: 0;
         top: 24px;
         width: 54px;
-        height: 54px;
+        height: auto;
         cursor: pointer;
+
+        @include mixins.breakpoint(1000px) {
+            width: 45px;
+        }
     }
 }
 
@@ -110,36 +150,69 @@ header {
 main {
     display: grid;
     grid-template-columns: 20.7% 53.8% 25.5%;
-    // gap: 23px;
+    
+    @include mixins.breakpoint(1300px) {
+        grid-template-columns: 18% 54% 28%;
+    }
+    @include mixins.breakpoint(1000px) {
+        grid-template-columns: 66% 34%;
+    }
+    @include mixins.breakpoint(750px) {
+        grid-template-columns: 100%;
+    }
 
     // COL GAUCHE
 
     .col-gauche {
         grid-column: 1/2;
-        padding: 0 22px 0 22px;
+        padding: 0 22px;
         display: flex;
         flex-direction: column;
+
+        @include mixins.breakpoint(1000px) {
+            display: none;
+        }
 
         .dashboard {
             display: flex;
             justify-content: center;
             margin-top: 92px;
+
+            @include mixins.breakpoint(1300px) {
+                margin-top: 40px;
+            }
         }
 
         .btn-dashboard {
             display: flex;
             align-items: center;
             padding: 13px 29px;
-            gap: 17px;
+            gap: 6.72%;
             background: linear-gradient(266.37deg, #FAFF00 -5.82%, #FAFF00 15.95%, #1970D6 41.2%, #6C1182 72.88%);
             border-radius: 17px;
-            width: 253px;
+            // width: 253px;
             height: 65px;
             cursor: pointer;
+
+            @include mixins.breakpoint(1600px) {
+                padding: 10px 20px;
+            }
+            @include mixins.breakpoint(1300px) {
+                padding: 8px 16px;
+            }
 
             img {
                 width: 44px;
                 height: 45px;
+
+                @include mixins.breakpoint(1600px) {
+                    width: 35px;
+                    height: 35px;
+                }
+                @include mixins.breakpoint(1300px) {
+                    width: 28px;
+                    height: 28px;
+                }
             }
 
             span {
@@ -147,6 +220,13 @@ main {
                 font-weight: 400;
                 font-size: 25px;
                 line-height: 38px;
+
+                @include mixins.breakpoint(1600px) {
+                    font-size: 18px;
+                }
+                @include mixins.breakpoint(1300px) {
+                    font-size: 14px;
+                }
             }
         }
 
@@ -160,14 +240,26 @@ main {
                 display: flex;
                 align-items: center;
                 gap: 10px;
-                // padding: 23.5px 0px 18.5px 45.5px;
-                padding-left: 45.5px;
+                padding-left: 14%;
                 // height: 78px;
+
+                @include mixins.breakpoint(1300px) {
+                    padding-left: 12%;
+                }
 
                 img {
                     width: 44px;
                     height: 44px;
                     color: rgba(255, 255, 255, 0.8);
+
+                    @include mixins.breakpoint(1600px) {
+                        width: 35px;
+                        height: 35px;
+                    }
+                    @include mixins.breakpoint(1300px) {
+                        width: 30px;
+                        height: 30px;
+                    }
                 }
 
                 span {
@@ -177,6 +269,13 @@ main {
                     line-height: 38px;
                     color: rgba(255, 255, 255, 0.8);
                     opacity: 0.8;
+
+                    @include mixins.breakpoint(1600px) {
+                        font-size: 20px;
+                    }
+                    @include mixins.breakpoint(1300px) {
+                        font-size: 17px;
+                    }
                 }
             }
         }
@@ -188,11 +287,16 @@ main {
             padding: 14px 0px 14px 11px;
             position: absolute;
             bottom: 27px;
-            left: 76px;
+            left: 4.29%;
 
             img {
                 width: 40px;
                 height: 35px;
+
+                @include mixins.breakpoint(1600px) {
+                    width: 35px;
+                    height: auto;
+                }
             }
 
             span {
@@ -201,6 +305,10 @@ main {
                 font-size: 25px;
                 line-height: 30px;
                 color: rgba(255, 255, 255, 0.8);
+
+                @include mixins.breakpoint(1600px) {
+                    font-size: 20px;
+                }
             }
         }
     }
@@ -210,16 +318,21 @@ main {
     .col-centre {
         grid-column: 2/3;
 
+        @include mixins.breakpoint(1000px) {
+            grid-column: 1/2;
+            padding-left: 20px;
+        }
+        @include mixins.breakpoint(1000px) {
+            padding-right: 20px;
+        }
+
         .top-bloc {
             display: flex;
             align-items: center;
-            gap: 91px;
+            gap: 9.54%;
             color: #FFFFFF;
 
             .bloc-gauche {
-                // display: flex;
-                // flex-direction: column;
-                // gap: 10px;
 
                 .balance {
                     font-family: 'Poppins';
@@ -228,6 +341,11 @@ main {
                     line-height: 33px;
                     opacity: 0.8;
                     margin-bottom: 21px;
+
+                    @include mixins.breakpoint(1600px) {
+                        font-size: 17px;
+                        margin-bottom: 16px;
+                    }
                 }
 
                 div {
@@ -241,6 +359,10 @@ main {
                         font-weight: 700;
                         font-size: 29px;
                         line-height: 44px;
+
+                        @include mixins.breakpoint(1600px) {
+                            font-size: 20px;
+                        }
                     }
 
                     span {
@@ -252,6 +374,11 @@ main {
                         padding: 4px 9px 7px 9px;
                         background-color: #FAFF00;
                         border-radius: 8px;
+
+                        @include mixins.breakpoint(1600px) {
+                            font-size: 12px;
+                            padding: 3px 6px;
+                        }
                     }
                 }
 
@@ -261,6 +388,10 @@ main {
                     font-size: 22px;
                     line-height: 33px;
                     opacity: 0.7;
+
+                    @include mixins.breakpoint(1600px) {
+                        font-size: 17px;
+                    }
                 }
             }
 
@@ -277,26 +408,44 @@ main {
                 align-items: center;
                 gap: 22px;
 
+                @include mixins.breakpoint(1600px) {
+                    font-size: 17px;
+                    gap: 17px;
+                    padding: 8px 15px 8px 15px;
+                }
+                @include mixins.breakpoint(1300px) {
+                    font-size: 13px;
+                }
+
                 span:first-child {
                     padding: 5.5px 22px;
                     background: #0D0C0C;
                     border-radius: 17px;
+
+                    @include mixins.breakpoint(1300px) {
+                        padding: 3px 10px;
+                    }
                 }
             }
         }
 
         .bloc-graphique {
             margin: 30px 0 21px 0;
-            padding: 30px 36px 64px 40px;
+            padding: 30px;
             background-color: rgba(48, 53, 65, 0.67);
             border-radius: 30px;
-            height: 558px;
+            // height: 558px;
             width: 100%;
             color: #FFFFFF;
 
             .top-row {
                 display: flex;
                 justify-content: space-between;
+
+                @include mixins.breakpoint(1000px) {
+                    flex-wrap: wrap;
+                    row-gap: 10px;
+                }
 
                 .date-options {
                     display: flex;
@@ -311,15 +460,41 @@ main {
                         border-radius: 5px;
                         background-color: #000000;
                         margin-right: 10px;
+
+                        @include mixins.breakpoint(1600px) {
+                            font-size: 20px;
+                            padding: 1px 5px;
+                        }
+                        @include mixins.breakpoint(1300px) {
+                            font-size: 15px;
+                            padding: 0 5px;
+                        }
                     }
                     img {
                         padding: 9px;
+
+                        @include mixins.breakpoint(1300px) {
+                            width: 35px;
+                            height: auto;
+                        }
                     }
                 }
 
                 .switch-bloc {
                     display: flex;
+                    align-items: center;
                     gap: 13px;
+
+                    .double-arrows {
+                        @include mixins.breakpoint(1600px) {
+                            width: 40px;
+                            height: 40px;
+                        }
+                        @include mixins.breakpoint(1300px) {
+                            width: 30px;
+                            height: 30px;
+                        }
+                    }
 
                     div {
                         display: flex;
@@ -328,17 +503,37 @@ main {
                         background-color: #000000;
                         padding: 3px 18px 3px 11px;
 
+                        @include mixins.breakpoint(1300px) {
+                            gap: 12px;
+                            padding: 3px 10px;
+                        }
+
                         span {
                             opacity: 0.7;
                             font-family: 'Poppins';
                             font-weight: 600;
                             font-size: 17px;
                             line-height: 26px;
+
+                            @include mixins.breakpoint(1300px) {
+                                font-size: 13px;
+                            }
                         }
 
                         img:first-child {
                             width: 30px;
                             height: 30px;
+
+                            @include mixins.breakpoint(1300px) {
+                                width: 20px;
+                                height: 20px;
+                            }
+                        }
+                        img:last-child {
+                            @include mixins.breakpoint(1300px) {
+                                height: 13px;
+                                width: 13px;
+                            }
                         }
                     }
                 }
@@ -348,49 +543,50 @@ main {
                 display: flex;
                 padding: 18px 0;
 
-                #numbers-col {
-                    display: flex;
-                    flex-direction: column-reverse;
-                    gap: 32px;
-                    padding-left: 7px;
+                // #numbers-col {
+                //     display: flex;
+                //     flex-direction: column-reverse;
+                //     gap: 32px;
+                //     padding-left: 7px;
 
-                    @include mixins.poppins();
-                }
+                //     @include mixins.poppins();
+                // }
 
                 .graphique {
                     position: relative;
-                    width: 100%;
+                    // width: 100%;
 
                     img {
                         max-width: 100%;
+                        height: auto
                     }
 
-                    img:first-child {
-                        z-index: 3;
-                        position: absolute;
-                    }
-                    img:nth-child(2) {
-                        z-index: 1;
-                        position: absolute;
-                        left: 6%;
-                        top: 10px;
+                    // img:first-child {
+                    //     z-index: 3;
+                    //     position: absolute;
+                    // }
+                    // img:nth-child(2) {
+                    //     z-index: 1;
+                    //     position: absolute;
+                    //     left: 6%;
+                    //     top: 10px;
                         
-                    }
-                    img:last-child {
-                        z-index: 2;
-                        position: absolute;
-                        right: 15px;
-                        bottom: 30px;
-                    }
+                    // }
+                    // img:last-child {
+                    //     z-index: 2;
+                    //     position: absolute;
+                    //     right: 15px;
+                    //     bottom: 30px;
+                    // }
                 }
             }
 
-            #days {
-                @include mixins.poppins();
-                display: flex;
-                gap: 19px;
-                padding: 0 20px;
-            }
+            // #days {
+            //     @include mixins.poppins();
+            //     display: flex;
+            //     gap: 19px;
+            //     padding: 0 20px;
+            // }
 
             div:last-child {
                 display: flex;
@@ -410,6 +606,10 @@ main {
 
                 p, span {
                     @include mixins.title();
+
+                    @include mixins.breakpoint(1600px) {
+                        font-size: 17px;
+                    }
                 }
                 span {
                     opacity: 0.7;
@@ -427,6 +627,14 @@ main {
                 color: #FFFFFF;
                 padding: 12px 30px 17px 50px;
 
+                @include mixins.breakpoint(1300px) {
+                    padding: 10px 25px;
+                }
+                @include mixins.breakpoint(1000px) {
+                    flex-wrap: wrap;
+                    row-gap: 10px;
+                }
+
                 img:first-child {
                     height: 39px;
                     width: 39px;
@@ -442,6 +650,10 @@ main {
 
                     span {
                         @include mixins.inter();
+
+                        @include mixins.breakpoint(1300px) {
+                            font-size: 10px;
+                        }
                     }
                     span:last-child {
                         opacity: 0.7;
@@ -456,6 +668,11 @@ main {
                     background-color: #000000;
                     border-radius: 30px;
                     padding: 6px 18px;
+
+                    @include mixins.breakpoint(1300px) {
+                        font-size: 11px;
+                        padding: 5px 12px;
+                    }
                 }
             }
         }
@@ -466,10 +683,25 @@ main {
     .col-droite {
         grid-column: 3/4;
 
+        @include mixins.breakpoint(1000px) {
+            grid-column: 2/3;
+        }
+        @include mixins.breakpoint(750px) {
+            grid-column: 1/2;
+        }
+
         padding: 20px 21px 37px 24px;
+
+        @include mixins.breakpoint(1300px) {
+            padding: 20px 22px;
+        }
 
         p {
             @include mixins.title();
+
+            @include mixins.breakpoint(1600px) {
+                font-size: 17px;
+            }
         }
 
         .transactions {
@@ -483,10 +715,19 @@ main {
                 display: flex;
                 gap: 27px;
                 padding: 7px 0px 7px 17px;
+
+                @include mixins.breakpoint(1300px) {
+                    gap: 15px;
+                }
     
                 img {
                     width: 52px;
                     height: 52px;
+
+                    @include mixins.breakpoint(1600px) {
+                        width: 40px;
+                        height: 40px;
+                    }
                 }
     
                 span {
@@ -494,6 +735,13 @@ main {
                     font-weight: 600;
                     font-size: 19px;
                     line-height: 23px;
+
+                    @include mixins.breakpoint(1600px) {
+                        font-size: 14px;
+                    }
+                    @include mixins.breakpoint(1300px) {
+                        font-size: 10px;
+                    }
                 }
     
                 .info-transaction {
@@ -503,6 +751,10 @@ main {
                     gap: 5px;
                     width: 100%;
                     padding-right: 13px;
+
+                    @include mixins.breakpoint(1600px) {
+                        gap: 3px;
+                    }
     
                     div {
                         display: flex;
@@ -527,12 +779,17 @@ main {
             .asset {
                 width: 100%;
                 border-radius: 30px;
-                height: 174px;
+                // height: 174px;
                 padding: 20px 51px 12px 29px;
 
                 img {
                     width: 70px;
                     height: 70px;
+
+                    @include mixins.breakpoint(1600px) {
+                        width: 50px;
+                        height: 50px;
+                    }
                 }
 
                 .title-asset {
@@ -552,6 +809,13 @@ main {
                         font-weight: 600;
                         font-size: 27px;
                         line-height: 33px;
+
+                        @include mixins.breakpoint(1600px) {
+                            font-size: 20px;
+                        }
+                        @include mixins.breakpoint(1300px) {
+                            font-size: 15px;
+                        }
                     }
                 }
             }
