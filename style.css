@@ -130,12 +130,15 @@ header .bell {
   header .bell {
     width: 30px;
     height: auto;
+    position: absolute;
+    left: 0;
+    top: 0;
   }
 }
 header .profil {
   position: absolute;
   right: 0;
-  top: 24px;
+  top: 0;
   width: 54px;
   height: auto;
   cursor: pointer;
@@ -178,8 +181,18 @@ main .fa-bars {
     display: block;
   }
 }
-main .col-burger span {
-  color: #FFFFFF;
+main .col-burger {
+  margin-bottom: 40px;
+  display: none;
+  grid-column: 1/3;
+}
+main .col-burger .btn-dashboard span {
+  font-weight: bold;
+}
+@media screen and (max-width: 1000px) {
+  main .col-burger {
+    display: block;
+  }
 }
 main .none {
   display: none;
@@ -198,17 +211,17 @@ main .col-gauche {
     display: none;
   }
 }
-main .col-gauche .dashboard {
+main .dashboard {
   display: flex;
   justify-content: center;
   margin-top: 92px;
 }
 @media screen and (max-width: 1300px) {
-  main .col-gauche .dashboard {
+  main .dashboard {
     margin-top: 40px;
   }
 }
-main .col-gauche .btn-dashboard {
+main .btn-dashboard {
   display: flex;
   align-items: center;
   padding: 13px 29px;
@@ -219,82 +232,82 @@ main .col-gauche .btn-dashboard {
   cursor: pointer;
 }
 @media screen and (max-width: 1600px) {
-  main .col-gauche .btn-dashboard {
+  main .btn-dashboard {
     padding: 10px 20px;
   }
 }
 @media screen and (max-width: 1300px) {
-  main .col-gauche .btn-dashboard {
+  main .btn-dashboard {
     padding: 8px 16px;
   }
 }
-main .col-gauche .btn-dashboard img {
+main .btn-dashboard img {
   width: 44px;
   height: 45px;
 }
 @media screen and (max-width: 1600px) {
-  main .col-gauche .btn-dashboard img {
+  main .btn-dashboard img {
     width: 35px;
     height: 35px;
   }
 }
 @media screen and (max-width: 1300px) {
-  main .col-gauche .btn-dashboard img {
+  main .btn-dashboard img {
     width: 28px;
     height: 28px;
   }
 }
-main .col-gauche .btn-dashboard span {
+main .btn-dashboard span {
   font-family: "Poppins";
   font-weight: 400;
   font-size: 25px;
   line-height: 38px;
 }
 @media screen and (max-width: 1600px) {
-  main .col-gauche .btn-dashboard span {
+  main .btn-dashboard span {
     font-size: 18px;
   }
 }
 @media screen and (max-width: 1300px) {
-  main .col-gauche .btn-dashboard span {
+  main .btn-dashboard span {
     font-size: 14px;
   }
 }
-main .col-gauche .menu-dashboard {
+main .menu-dashboard {
   display: flex;
   flex-direction: column;
   margin-top: 67px;
   gap: 18px;
 }
-main .col-gauche .menu-dashboard div {
+main .menu-dashboard div {
   display: flex;
   align-items: center;
   gap: 10px;
   padding-left: 14%;
 }
 @media screen and (max-width: 1300px) {
-  main .col-gauche .menu-dashboard div {
+  main .menu-dashboard div {
     padding-left: 12%;
   }
 }
-main .col-gauche .menu-dashboard div img {
+main .menu-dashboard div img {
   width: 44px;
   height: 44px;
   color: rgba(255, 255, 255, 0.8);
 }
 @media screen and (max-width: 1600px) {
-  main .col-gauche .menu-dashboard div img {
+  main .menu-dashboard div img {
     width: 35px;
     height: 35px;
   }
 }
 @media screen and (max-width: 1300px) {
-  main .col-gauche .menu-dashboard div img {
+  main .menu-dashboard div img {
     width: 30px;
     height: 30px;
   }
 }
-main .col-gauche .menu-dashboard div span {
+main .menu-dashboard div span {
   font-family: "Poppins";
   font-weight: 500;
   font-size: 25px;
@@ -303,16 +316,23 @@ main .col-gauche .menu-dashboard div span {
   opacity: 0.8;
 }
 @media screen and (max-width: 1600px) {
-  main .col-gauche .menu-dashboard div span {
+  main .menu-dashboard div span {
     font-size: 20px;
   }
 }
 @media screen and (max-width: 1300px) {
-  main .col-gauche .menu-dashboard div span {
+  main .menu-dashboard div span {
     font-size: 17px;
   }
 }
-main .col-gauche .btn-logout {
+main .dashboard-burger {
+  flex-direction: row;
+  gap: 0;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  padding-left: 0;
+}
+main .btn-logout {
   display: flex;
   align-items: center;
   gap: 15px;
@@ -321,17 +341,17 @@ main .col-gauche .btn-logout {
   bottom: 27px;
   left: 4.29%;
 }
-main .col-gauche .btn-logout img {
+main .btn-logout img {
   width: 40px;
   height: 35px;
 }
 @media screen and (max-width: 1600px) {
-  main .col-gauche .btn-logout img {
+  main .btn-logout img {
     width: 35px;
     height: auto;
   }
 }
-main .col-gauche .btn-logout span {
+main .btn-logout span {
   font-family: "Inter";
   font-weight: 400;
   font-size: 25px;
@@ -339,9 +359,14 @@ main .col-gauche .btn-logout span {
   color: rgba(255, 255, 255, 0.8);
 }
 @media screen and (max-width: 1600px) {
-  main .col-gauche .btn-logout span {
+  main .btn-logout span {
     font-size: 20px;
   }
+}
+main .logout-burger {
+  position: relative;
+  bottom: 0;
+  left: 0;
 }
 main .col-centre {
   grid-column: 2/3;
